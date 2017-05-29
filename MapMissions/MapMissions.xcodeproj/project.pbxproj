@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		322514F91EDC8B2500EE7A83 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322514F81EDC8B2500EE7A83 /* ServiceManager.swift */; };
+		322514FB1EDC8BBF00EE7A83 /* MapControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322514FA1EDC8BBF00EE7A83 /* MapControllerProtocol.swift */; };
 		3228F7D01EDB846300B6B730 /* DJIRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3228F7CF1EDB846300B6B730 /* DJIRootViewController.swift */; };
 		3228F7D21EDB85C500B6B730 /* DJIMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3228F7D11EDB85C500B6B730 /* DJIMapController.swift */; };
 		32B366C51EDB832500F08C07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B366C41EDB832500F08C07 /* AppDelegate.swift */; };
@@ -31,6 +33,8 @@
 
 /* Begin PBXFileReference section */
 		0EAF790F7DB925A23E23E7C4 /* Pods_MapMissions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapMissions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		322514F81EDC8B2500EE7A83 /* ServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		322514FA1EDC8BBF00EE7A83 /* MapControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapControllerProtocol.swift; sourceTree = "<group>"; };
 		3228F7CF1EDB846300B6B730 /* DJIRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJIRootViewController.swift; sourceTree = "<group>"; };
 		3228F7D11EDB85C500B6B730 /* DJIMapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJIMapController.swift; sourceTree = "<group>"; };
 		32B366C11EDB832500F08C07 /* MapMissions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapMissions.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +105,8 @@
 				32B366CB1EDB832500F08C07 /* MapMissions.xcdatamodeld */,
 				3228F7CF1EDB846300B6B730 /* DJIRootViewController.swift */,
 				3228F7D11EDB85C500B6B730 /* DJIMapController.swift */,
+				322514F81EDC8B2500EE7A83 /* ServiceManager.swift */,
+				322514FA1EDC8BBF00EE7A83 /* MapControllerProtocol.swift */,
 			);
 			path = MapMissions;
 			sourceTree = "<group>";
@@ -357,6 +363,8 @@
 				32B366CD1EDB832500F08C07 /* MapMissions.xcdatamodeld in Sources */,
 				3228F7D21EDB85C500B6B730 /* DJIMapController.swift in Sources */,
 				32B366C51EDB832500F08C07 /* AppDelegate.swift in Sources */,
+				322514FB1EDC8BBF00EE7A83 /* MapControllerProtocol.swift in Sources */,
+				322514F91EDC8B2500EE7A83 /* ServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

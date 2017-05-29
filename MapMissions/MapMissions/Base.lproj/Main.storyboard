@@ -24,6 +24,14 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OsS-xS-NTV">
                                 <rect key="frame" x="0.0" y="28" width="375" height="639"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QwU-ms-qU6">
+                                <rect key="frame" x="16" y="43" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="editButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x7b-u4-8rF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -34,6 +42,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="editButton" destination="QwU-ms-qU6" id="zw4-by-xwR"/>
                         <outlet property="mapView" destination="OsS-xS-NTV" id="EMX-rd-y3c"/>
                     </connections>
                 </viewController>

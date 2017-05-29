@@ -9,10 +9,10 @@
 import UIKit
 import MapKit
 
-class DJIMapController: NSObject {
+class DJIMapController: MapControllerProtocol {
     var editPoints: [CLLocation]
 
-    override init() {
+    init() {
         editPoints = [CLLocation]()
     }
 
