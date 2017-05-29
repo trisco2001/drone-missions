@@ -141,6 +141,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 32B366E11EDB832600F08C07 /* Build configuration list for PBXNativeTarget "MapMissions" */;
 			buildPhases = (
+				322514F71EDC86B000EE7A83 /* Run SwiftLint */,
 				77F2D7EF10E7F71E3477B485 /* [CP] Check Pods Manifest.lock */,
 				32B366BD1EDB832500F08C07 /* Sources */,
 				32B366BE1EDB832500F08C07 /* Frameworks */,
@@ -241,6 +242,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		322514F71EDC86B000EE7A83 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint autocorrect\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
 		64F4E2DCD3319381BFD81747 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

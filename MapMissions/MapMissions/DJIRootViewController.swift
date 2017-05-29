@@ -11,6 +11,8 @@ import MapKit
 import DJISDK
 
 class DJIRootViewController: UIViewController, MKMapViewDelegate {
-    
+
     @IBOutlet weak var mapView: MKMapView!
+
+    var mapController: DJIMapController?
 }

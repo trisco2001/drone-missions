@@ -19,7 +19,6 @@
 		231D796972D841EB87C77B7F2560A75E /* Pods-MapMissionsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MapMissionsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3B38D862348B9F3172B022FC21381F24 /* Pods-MapMissions.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MapMissions.modulemap"; sourceTree = "<group>"; };
 		5DCD5B5C6A417FC827C12D79DAE427A7 /* Pods-MapMissions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MapMissions.debug.xcconfig"; sourceTree = "<group>"; };
-		60D35208A41F813C11CF2EABF1729F56 /* DJISDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DJISDK.framework; path = iOS_Mobile_SDK/DJISDK.framework; sourceTree = "<group>"; };
 		65E1D1CC17E60ED811E71BC588CB129C /* Pods-MapMissionsTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MapMissionsTests.modulemap"; sourceTree = "<group>"; };
 		66802D7214929B2AC67866BF22A2BE13 /* Pods-MapMissionsTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MapMissionsTests-umbrella.h"; sourceTree = "<group>"; };
 		6D57D82E37EF77F20599CAD9EBA3F9EE /* Pods-MapMissions-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MapMissions-umbrella.h"; sourceTree = "<group>"; };
@@ -37,6 +36,7 @@
 		C1840B5E1A390706BF49E9CF33871FC3 /* Pods-MapMissions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MapMissions.release.xcconfig"; sourceTree = "<group>"; };
 		C4FB5F5DE7551FE9AF423E4C9CFEBC63 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CDE6135B914F892BB59B639071E6FA3E /* DJISDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DJISDK.framework; path = iOS_Mobile_SDK/DJISDK.framework; sourceTree = "<group>"; };
 		CE40034AD5EA7A64C4AC4318582D1543 /* Pods_MapMissionsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MapMissionsTests.framework; path = "Pods-MapMissionsTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E03125F530D09580D93F740292799D50 /* Pods-MapMissionsTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MapMissionsTests-frameworks.sh"; sourceTree = "<group>"; };
 		F959E0D30870B8575F68D49B26090370 /* Pods_MapMissions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MapMissions.framework; path = "Pods-MapMissions.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,20 +81,38 @@
 			path = "Target Support Files/Pods-MapMissions";
 			sourceTree = "<group>";
 		};
-		56F41CF807F2E3D702FCC66A3C9E3ED3 /* Pods */ = {
+		1C59DC77202D2B8D8A9E4A5C716D72E4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B807EC8B5210DCC405066E964D6E24F1 /* DJI-SDK-iOS */,
+				CDE6135B914F892BB59B639071E6FA3E /* DJISDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		23A0E53017DF31B35270B4D478CF6052 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				40D2067D2279BFD21A1E7DD000185DAA /* DJI-SDK-iOS */,
+				4E2C26794EC4093B81FE73B973FAEC58 /* SwiftLint */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		67CB930674CE5A381B0C1916D23A3035 /* Frameworks */ = {
+		40D2067D2279BFD21A1E7DD000185DAA /* DJI-SDK-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				60D35208A41F813C11CF2EABF1729F56 /* DJISDK.framework */,
+				1C59DC77202D2B8D8A9E4A5C716D72E4 /* Frameworks */,
 			);
-			name = Frameworks;
+			name = "DJI-SDK-iOS";
+			path = "DJI-SDK-iOS";
+			sourceTree = "<group>";
+		};
+		4E2C26794EC4093B81FE73B973FAEC58 /* SwiftLint */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SwiftLint;
+			path = SwiftLint;
 			sourceTree = "<group>";
 		};
 		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
@@ -110,7 +128,7 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				56F41CF807F2E3D702FCC66A3C9E3ED3 /* Pods */,
+				23A0E53017DF31B35270B4D478CF6052 /* Pods */,
 				86CDF5D14A3AFDE29E3B17EDFB3D8D20 /* Products */,
 				B3B3DA7DABB8B111FBBE6D8D6E927929 /* Targets Support Files */,
 			);
@@ -132,15 +150,6 @@
 				EAF98B5DB1431E9CCA45B0AD60BFBA4D /* Pods-MapMissionsTests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		B807EC8B5210DCC405066E964D6E24F1 /* DJI-SDK-iOS */ = {
-			isa = PBXGroup;
-			children = (
-				67CB930674CE5A381B0C1916D23A3035 /* Frameworks */,
-			);
-			name = "DJI-SDK-iOS";
-			path = "DJI-SDK-iOS";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
