@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,20 +25,39 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OsS-xS-NTV">
                                 <rect key="frame" x="0.0" y="28" width="375" height="639"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QwU-ms-qU6">
-                                <rect key="frame" x="16" y="43" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QwU-ms-qU6">
+                                <rect key="frame" x="16" y="43" width="65" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="LfH-xB-Il7"/>
+                                    <constraint firstAttribute="width" constant="65" id="Yeh-Mz-sBh"/>
+                                </constraints>
                                 <state key="normal" title="Edit"/>
                                 <connections>
                                     <action selector="editButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x7b-u4-8rF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faR-gz-Lfe">
+                                <rect key="frame" x="16" y="81" width="65" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="Hdd-yf-aXj"/>
+                                    <constraint firstAttribute="height" constant="30" id="qvm-6r-RQe"/>
+                                </constraints>
+                                <state key="normal" title="Focus"/>
+                                <connections>
+                                    <action selector="editButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nus-Rr-V4b"/>
+                                    <action selector="focusTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PxZ-c1-igH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="QwU-ms-qU6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="1r7-uH-z6D"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OsS-xS-NTV" secondAttribute="bottom" id="3Hc-bb-drg"/>
+                            <constraint firstItem="QwU-ms-qU6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="23" id="Iix-6L-stz"/>
                             <constraint firstAttribute="trailing" secondItem="OsS-xS-NTV" secondAttribute="trailing" id="NqX-SK-9EM"/>
                             <constraint firstItem="OsS-xS-NTV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="QGc-8s-M2n"/>
+                            <constraint firstItem="faR-gz-Lfe" firstAttribute="top" secondItem="QwU-ms-qU6" secondAttribute="bottom" constant="8" id="VYH-AO-Jz1"/>
+                            <constraint firstItem="faR-gz-Lfe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fwI-la-xLm"/>
                             <constraint firstItem="OsS-xS-NTV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tsN-7E-pv6"/>
                         </constraints>
                     </view>

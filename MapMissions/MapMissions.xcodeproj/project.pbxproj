@@ -11,6 +11,8 @@
 		322514FB1EDC8BBF00EE7A83 /* MapControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322514FA1EDC8BBF00EE7A83 /* MapControllerProtocol.swift */; };
 		3228F7D01EDB846300B6B730 /* DJIRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3228F7CF1EDB846300B6B730 /* DJIRootViewController.swift */; };
 		3228F7D21EDB85C500B6B730 /* DJIMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3228F7D11EDB85C500B6B730 /* DJIMapController.swift */; };
+		323BBF861EDC9B0000263B15 /* LocationManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323BBF851EDC9B0000263B15 /* LocationManagerProtocol.swift */; };
+		32A5DB471EDCA3FF00278EB1 /* BuiltInLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A5DB461EDCA3FF00278EB1 /* BuiltInLocationManager.swift */; };
 		32B366C51EDB832500F08C07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B366C41EDB832500F08C07 /* AppDelegate.swift */; };
 		32B366CA1EDB832500F08C07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32B366C81EDB832500F08C07 /* Main.storyboard */; };
 		32B366CD1EDB832500F08C07 /* MapMissions.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 32B366CB1EDB832500F08C07 /* MapMissions.xcdatamodeld */; };
@@ -37,6 +39,8 @@
 		322514FA1EDC8BBF00EE7A83 /* MapControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapControllerProtocol.swift; sourceTree = "<group>"; };
 		3228F7CF1EDB846300B6B730 /* DJIRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJIRootViewController.swift; sourceTree = "<group>"; };
 		3228F7D11EDB85C500B6B730 /* DJIMapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJIMapController.swift; sourceTree = "<group>"; };
+		323BBF851EDC9B0000263B15 /* LocationManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManagerProtocol.swift; sourceTree = "<group>"; };
+		32A5DB461EDCA3FF00278EB1 /* BuiltInLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuiltInLocationManager.swift; sourceTree = "<group>"; };
 		32B366C11EDB832500F08C07 /* MapMissions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapMissions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32B366C41EDB832500F08C07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32B366C91EDB832500F08C07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,6 +78,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		323BBF841EDC9AE600263B15 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				322514FA1EDC8BBF00EE7A83 /* MapControllerProtocol.swift */,
+				323BBF851EDC9B0000263B15 /* LocationManagerProtocol.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		323BBF871EDC9B5A00263B15 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				3228F7D11EDB85C500B6B730 /* DJIMapController.swift */,
+				32A5DB461EDCA3FF00278EB1 /* BuiltInLocationManager.swift */,
+			);
+			name = Implementations;
+			sourceTree = "<group>";
+		};
 		32B366B81EDB832500F08C07 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +119,8 @@
 		32B366C31EDB832500F08C07 /* MapMissions */ = {
 			isa = PBXGroup;
 			children = (
+				323BBF871EDC9B5A00263B15 /* Implementations */,
+				323BBF841EDC9AE600263B15 /* Protocols */,
 				32B366C41EDB832500F08C07 /* AppDelegate.swift */,
 				32B366C81EDB832500F08C07 /* Main.storyboard */,
 				32B366CE1EDB832500F08C07 /* Assets.xcassets */,
@@ -104,9 +128,7 @@
 				32B366D31EDB832500F08C07 /* Info.plist */,
 				32B366CB1EDB832500F08C07 /* MapMissions.xcdatamodeld */,
 				3228F7CF1EDB846300B6B730 /* DJIRootViewController.swift */,
-				3228F7D11EDB85C500B6B730 /* DJIMapController.swift */,
 				322514F81EDC8B2500EE7A83 /* ServiceManager.swift */,
-				322514FA1EDC8BBF00EE7A83 /* MapControllerProtocol.swift */,
 			);
 			path = MapMissions;
 			sourceTree = "<group>";
@@ -361,8 +383,10 @@
 			files = (
 				3228F7D01EDB846300B6B730 /* DJIRootViewController.swift in Sources */,
 				32B366CD1EDB832500F08C07 /* MapMissions.xcdatamodeld in Sources */,
+				32A5DB471EDCA3FF00278EB1 /* BuiltInLocationManager.swift in Sources */,
 				3228F7D21EDB85C500B6B730 /* DJIMapController.swift in Sources */,
 				32B366C51EDB832500F08C07 /* AppDelegate.swift in Sources */,
+				323BBF861EDC9B0000263B15 /* LocationManagerProtocol.swift in Sources */,
 				322514FB1EDC8BBF00EE7A83 /* MapControllerProtocol.swift in Sources */,
 				322514F91EDC8B2500EE7A83 /* ServiceManager.swift in Sources */,
 			);
