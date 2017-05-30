@@ -10,10 +10,15 @@ import UIKit
 import MapKit
 import DJISDK
 
-class DJIRootViewController: UIViewController, MKMapViewDelegate, LocationManagerDelegate {
+class DJIRootViewController: UIViewController, MKMapViewDelegate, LocationManagerDelegate, DJISDKManagerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var editButton: UIButton!
+    @IBOutlet weak var mode: UILabel!
+    @IBOutlet weak var gps: UILabel!
+    @IBOutlet weak var hsLabel: UILabel!
+    @IBOutlet weak var vsLabel: UILabel!
+    @IBOutlet weak var altLabel: UILabel!
 
     var mapController: MapControllerProtocol!
     var locationManager: LocationManagerProtocol!
@@ -31,8 +36,26 @@ class DJIRootViewController: UIViewController, MKMapViewDelegate, LocationManage
         mapView.addGestureRecognizer(tapGesture)
 
         locationManager.delegate = self
+
+        mode.text = "N/A"
+        gps.text = "0"
+        vsLabel.text = "0.0 M/S"
+        hsLabel.text = "0.0 M/S"
+        altLabel.text = "0 M"
+
+        if !DJISDKManager.hasSDKRegistered() {
+            DJISDKManager.registerApp(with: self)
+        }
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
         locationManager.startUpdateLocation()
     }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        locationManager.stopUpdateLocation()
+    }
+
     @IBAction func editButtonAction(_ sender: Any) {
         if isEditingPoints {
             mapController.cleanAllPoints(mapView: mapView)
@@ -85,5 +108,17 @@ class DJIRootViewController: UIViewController, MKMapViewDelegate, LocationManage
             mapView.setRegion(region, animated: true)
         }
 
+    }
+
+    func appRegisteredWithError(_ error: Error?) {
+        if error != nil {
+            NSLog("%@", error?.localizedDescription ?? "")
+        }
+    }
+
+    func productConnected(_ product: DJIBaseProduct?) {
+        if product != nil {
+
+        }
     }
 }

@@ -43,5 +43,14 @@
 	</array>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>We want the map all the time.</string>
+	<key>DJISDKAppKey</key>
+	<string>e5288363c94afaab27754065</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We&apos;ll take it when in use too.</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>

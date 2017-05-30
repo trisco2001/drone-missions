@@ -11,6 +11,7 @@ import MapKit
 
 class DJIMapController: MapControllerProtocol {
     var editPoints: [CLLocation]
+    var aircraftAnnotation: AircraftAnnotation!
 
     init() {
         editPoints = [CLLocation]()
@@ -27,7 +28,26 @@ class DJIMapController: MapControllerProtocol {
     func cleanAllPoints(mapView: MKMapView) {
         editPoints.removeAll()
         for annotation in mapView.annotations {
-            mapView.removeAnnotation(annotation)
+            if !(annotation is AircraftAnnotation) {
+                mapView.removeAnnotation(annotation)
+            }
         }
+    }
+
+    func update(withAircraftLocation aircraftLocation: CLLocationCoordinate2D, andMapView mapView: MKMapView) {
+        if aircraftAnnotation == nil {
+            aircraftAnnotation = AircraftAnnotation(withCoordinate: aircraftLocation)
+            mapView.addAnnotation(aircraftAnnotation)
+        } else {
+            aircraftAnnotation.coordinate = aircraftLocation
+        }
+    }
+
+    func update(withAircraftHeading aircraftHeading: CGFloat) {
+        guard let guardedAnnotation = aircraftAnnotation else {
+            return
+        }
+
+        guardedAnnotation.update(withHeading: aircraftHeading)
     }
 }

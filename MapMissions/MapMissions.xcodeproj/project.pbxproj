@@ -12,6 +12,9 @@
 		3228F7D01EDB846300B6B730 /* DJIRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3228F7CF1EDB846300B6B730 /* DJIRootViewController.swift */; };
 		3228F7D21EDB85C500B6B730 /* DJIMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3228F7D11EDB85C500B6B730 /* DJIMapController.swift */; };
 		323BBF861EDC9B0000263B15 /* LocationManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323BBF851EDC9B0000263B15 /* LocationManagerProtocol.swift */; };
+		324320D81EDCD5E900178355 /* AircraftAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324320D71EDCD5E900178355 /* AircraftAnnotationView.swift */; };
+		324320DB1EDCD84200178355 /* AircraftAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324320DA1EDCD84200178355 /* AircraftAnnotation.swift */; };
+		324320DD1EDCDC6700178355 /* aircraft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 324320DC1EDCDC6700178355 /* aircraft@2x.png */; };
 		32A5DB471EDCA3FF00278EB1 /* BuiltInLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A5DB461EDCA3FF00278EB1 /* BuiltInLocationManager.swift */; };
 		32B366C51EDB832500F08C07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B366C41EDB832500F08C07 /* AppDelegate.swift */; };
 		32B366CA1EDB832500F08C07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32B366C81EDB832500F08C07 /* Main.storyboard */; };
@@ -40,6 +43,9 @@
 		3228F7CF1EDB846300B6B730 /* DJIRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJIRootViewController.swift; sourceTree = "<group>"; };
 		3228F7D11EDB85C500B6B730 /* DJIMapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJIMapController.swift; sourceTree = "<group>"; };
 		323BBF851EDC9B0000263B15 /* LocationManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManagerProtocol.swift; sourceTree = "<group>"; };
+		324320D71EDCD5E900178355 /* AircraftAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AircraftAnnotationView.swift; sourceTree = "<group>"; };
+		324320DA1EDCD84200178355 /* AircraftAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AircraftAnnotation.swift; sourceTree = "<group>"; };
+		324320DC1EDCDC6700178355 /* aircraft@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aircraft@2x.png"; sourceTree = "<group>"; };
 		32A5DB461EDCA3FF00278EB1 /* BuiltInLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuiltInLocationManager.swift; sourceTree = "<group>"; };
 		32B366C11EDB832500F08C07 /* MapMissions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapMissions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32B366C41EDB832500F08C07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +102,39 @@
 			name = Implementations;
 			sourceTree = "<group>";
 		};
+		324320D41EDCD47900178355 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3228F7CF1EDB846300B6B730 /* DJIRootViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		324320D51EDCD48D00178355 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				32B366C41EDB832500F08C07 /* AppDelegate.swift */,
+				322514F81EDC8B2500EE7A83 /* ServiceManager.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		324320D61EDCD5D500178355 /* Custom Controls */ = {
+			isa = PBXGroup;
+			children = (
+				324320D71EDCD5E900178355 /* AircraftAnnotationView.swift */,
+			);
+			name = "Custom Controls";
+			sourceTree = "<group>";
+		};
+		324320D91EDCD82E00178355 /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				324320DA1EDCD84200178355 /* AircraftAnnotation.swift */,
+			);
+			name = "Data Models";
+			sourceTree = "<group>";
+		};
 		32B366B81EDB832500F08C07 = {
 			isa = PBXGroup;
 			children = (
@@ -119,16 +158,18 @@
 		32B366C31EDB832500F08C07 /* MapMissions */ = {
 			isa = PBXGroup;
 			children = (
+				324320D91EDCD82E00178355 /* Data Models */,
+				324320D61EDCD5D500178355 /* Custom Controls */,
+				324320D51EDCD48D00178355 /* Utilities */,
+				324320D41EDCD47900178355 /* View Controllers */,
 				323BBF871EDC9B5A00263B15 /* Implementations */,
 				323BBF841EDC9AE600263B15 /* Protocols */,
-				32B366C41EDB832500F08C07 /* AppDelegate.swift */,
 				32B366C81EDB832500F08C07 /* Main.storyboard */,
+				324320DC1EDCDC6700178355 /* aircraft@2x.png */,
 				32B366CE1EDB832500F08C07 /* Assets.xcassets */,
 				32B366D01EDB832500F08C07 /* LaunchScreen.storyboard */,
 				32B366D31EDB832500F08C07 /* Info.plist */,
 				32B366CB1EDB832500F08C07 /* MapMissions.xcdatamodeld */,
-				3228F7CF1EDB846300B6B730 /* DJIRootViewController.swift */,
-				322514F81EDC8B2500EE7A83 /* ServiceManager.swift */,
 			);
 			path = MapMissions;
 			sourceTree = "<group>";
@@ -254,6 +295,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				324320DD1EDCDC6700178355 /* aircraft@2x.png in Resources */,
 				32B366D21EDB832500F08C07 /* LaunchScreen.storyboard in Resources */,
 				32B366CF1EDB832500F08C07 /* Assets.xcassets in Resources */,
 				32B366CA1EDB832500F08C07 /* Main.storyboard in Resources */,
@@ -383,10 +425,12 @@
 			files = (
 				3228F7D01EDB846300B6B730 /* DJIRootViewController.swift in Sources */,
 				32B366CD1EDB832500F08C07 /* MapMissions.xcdatamodeld in Sources */,
+				324320DB1EDCD84200178355 /* AircraftAnnotation.swift in Sources */,
 				32A5DB471EDCA3FF00278EB1 /* BuiltInLocationManager.swift in Sources */,
 				3228F7D21EDB85C500B6B730 /* DJIMapController.swift in Sources */,
 				32B366C51EDB832500F08C07 /* AppDelegate.swift in Sources */,
 				323BBF861EDC9B0000263B15 /* LocationManagerProtocol.swift in Sources */,
+				324320D81EDCD5E900178355 /* AircraftAnnotationView.swift in Sources */,
 				322514FB1EDC8BBF00EE7A83 /* MapControllerProtocol.swift in Sources */,
 				322514F91EDC8B2500EE7A83 /* ServiceManager.swift in Sources */,
 			);
